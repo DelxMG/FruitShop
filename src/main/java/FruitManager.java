@@ -12,7 +12,7 @@ import java.util.Scanner;
 public class FruitManager {
 
     private static List <Fruit> fruits = new ArrayList<>();
-    private static Path RUTA = Paths.get("fruits.txt");
+    private static final Path RUTA = Paths.get("fruits.txt");
 
     public static void addFruit(Scanner sc) {
 
@@ -108,7 +108,8 @@ public class FruitManager {
                 }
             }
 
-            fruits = read;
+            fruits.clear();
+            fruits.addAll(read);
 
             System.out.println("Frutas importadas desde el archivo:");
             listFruits();
