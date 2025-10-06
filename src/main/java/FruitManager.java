@@ -87,7 +87,7 @@ public class FruitManager {
             String line;
 
             while ((line = br.readLine()) != null) {
-                String[] parts = line.split(";");
+                String[] parts = line.split(";", -1);
 
                 if (parts.length != 4) {
                     System.err.println("Linea con formato incorrecto " + line);
